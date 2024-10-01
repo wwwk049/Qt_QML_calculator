@@ -1,0 +1,11 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MyAppTheme.qml</file>
+        <file>MyDispInput.qml</file>
+        <file>MyDispOutput.qml</file>
+        <file>MyCalcButtons.qml</file>
+        <file>MyCalcButton.qml</file>
+        <file>SecretMenu.qml</file>
+    </qresource>
+</RCC>
