@@ -1,0 +1,6 @@
+[
+    {
+        "merged": "org.learning.calc-merged_res-11:/xml_qtprovider_paths.xml.flat",
+        "source": "org.learning.calc-android-build-12:/xml/qtprovider_paths.xml"
+    }
+]
