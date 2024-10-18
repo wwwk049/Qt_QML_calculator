@@ -199,12 +199,18 @@ Item {
         anchors.centerIn: parent
 
         minimumPixelSize: 1  //минимальный размер шрифта в пикселях
-        font.pixelSize: 24
+        font.pixelSize: {
+            if (calcButton.buttonText === "÷" || calcButton.buttonText === "×" || calcButton.buttonText === "—" ||
+                   calcButton.buttonText === "+" || calcButton.buttonText === "=")
+                width * 1.2
+            else
+                width * 0.8
+        }
         lineHeight: 1.25  // межстрочный интервал: 30 пикселей / 24 пикселя = 1.25
         font.letterSpacing: 1 // межбуквенный интервал в пикселях
-        font.family: "Open Sans"  // шрифт
+        font.family: openSans.name  // шрифт
         font.weight: Font.DemiBold // Semibold
-        fontSizeMode: Text.Fit //вписываю в метку (достаточно изменить pixelSize, чтобы понять в чем дело)
+        //fontSizeMode: Text.Fit //вписываю в метку (достаточно изменить pixelSize, чтобы понять в чем дело)
 
         //совет
         // Изменяем цвет текста в зависимости от состояния

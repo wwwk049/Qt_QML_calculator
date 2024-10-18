@@ -15,6 +15,10 @@ Window {
     SecretMenu {
         id: secretMenu
     }
+    FontLoader {
+        id: openSans
+        source: "qrc:/Open Sans/OpenSans.ttf"
+    }
     /*** Layout ************************************************/
 
     Item{// удерживает все элементы
@@ -27,14 +31,18 @@ Window {
             color: appTheme.colorTeal
         }
 
+        // отступ
+
+        //.139375 + .046875 = .18625
+
         // элемент для отображения ввода
         MyDispInput {
             id: dispInput
             width: parent.width
-            height: parent.height * .175
+            height: parent.height * .18625
             anchors{
                 top: parent.top
-                topMargin: parent.height * .0001
+                topMargin: parent.height * .000001
                 horizontalCenter: parent.horizontalCenter
 
             }
@@ -43,21 +51,21 @@ Window {
         MyDispOutput {
             id: dispOutput
             width: parent.width
-            height: parent.height * .1
+            height: parent.height * .09375
             anchors{
                 top: parent.top
-                topMargin: parent.height * .175//контролирует отступ от верха
+                topMargin: parent.height * .18625 //контролирует отступ от верха
 
             }
         }
         // область отвечающая за кнопки
         MyCalcButtons {
             id: calcButtons
-            width: parent.width * .9
-            height: parent.height * .6
+            width: parent.width * .8666 // 360-312=48 1-48/360
+            height: parent.height * .61875 // 396/640
             anchors{//привязка (bottom - нижнего края элемента к другому элементу)
                 bottom: parent.bottom
-                bottomMargin: parent.height * .075
+                bottomMargin: parent.height * .07 // 640-180-396 = 64 ~ 40/640
                 horizontalCenter: parent.horizontalCenter
                 }
         }

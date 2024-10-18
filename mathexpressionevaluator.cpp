@@ -166,12 +166,16 @@ QString MathExpressionEvaluator::evaluateRPN(const QString &rpn)
     return values.top();
 }
 
+//typedef boost::multiprecision::cpp_dec_float_50 high_precision_float;
 // Применение оператора к двум операндам
 QString MathExpressionEvaluator::applyOperator(QChar op, const QString &a, const QString &b)
 {
     double numA = a.toDouble();
     double numB = b.toDouble();
     double result;
+    // high_precision_float numA(a.toStdString());  // Преобразуем строку в число высокой точности
+    // high_precision_float numB(b.toStdString());
+    // high_precision_float result;
 
     if (op == '+') {
         result = numA + numB;
@@ -188,7 +192,8 @@ QString MathExpressionEvaluator::applyOperator(QChar op, const QString &a, const
         throw std::runtime_error("Unknown operator");
     }
 
-    return QString::number(result, 'f', 25);  // Возвращаем строку с точностью до 25 знаков
+     return QString::number(result, 'f', 25);
+    //return QString::fromStdString(result.str(25, std::ios_base::fixed));
 }
 
 // Проверка, является ли символ оператором

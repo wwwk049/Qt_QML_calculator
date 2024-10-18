@@ -9,8 +9,9 @@ QtObject{
         property color colorTheme_1_5: "#F25E5E"
         property color colorTheme_1_6: "#FFFFFF"
         property color colorTheme_1_7: "#F7E425"
-        property real appWidth: 9*appRatioMultiplier
-        property real appHeight: 16*appRatioMultiplier
-        property real appRatioMultiplier: 35
+        property real appWidth: 360
+        property real appHeight: 640
+        //property real appRatioMultiplier: 35
         property string appTitle: "Cal"
+
     }

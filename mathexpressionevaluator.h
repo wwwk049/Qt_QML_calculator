@@ -6,6 +6,8 @@
 #include <QStack>
 #include <QRegularExpression>
 
+//#include <boost\libs\multiprecision\include\boost\multiprecision\cpp_dec_float.hpp>
+
 class MathExpressionEvaluator : public QObject
 {
     Q_OBJECT

@@ -6,22 +6,27 @@ Item {
             id: dispInput
 
             property string inputText: "0"
-
+// .7483  .2517
             Rectangle {
                 anchors.fill: parent
+                width: parent.width
+                height: parent.height
                 color: appTheme.colorTheme_1_3
+
             }
 
             Label {
                 anchors.fill: parent
-                anchors.rightMargin: 30
-                anchors.topMargin: 40
+                anchors.rightMargin: width * .0833
+                anchors.bottomMargin: height * 0.1
 
                 minimumPixelSize: 1
-                font.pixelSize: 20
-                lineHeight: 1.5
+                //.18625*640 119.2/20=5.96
+                font.pixelSize: height/5.96
+                lineHeight: 1.5 //(30*5.96)/height
+
                 font.letterSpacing: .5
-                font.family: "Open Sans"
+                font.family: openSans.name
                 font.weight: Font.DemiBold
                 fontSizeMode: Text.Fit
 
@@ -29,7 +34,7 @@ Item {
                 text: dispInput.inputText
 
                 horizontalAlignment: Text.AlignRight
-                verticalAlignment: Text.AlignVCenter
+                verticalAlignment: Text.AlignBottom
             }
 
         }

@@ -8,14 +8,14 @@ Item {//область для кнопок
 
             property int rowCount: 5
             property int colCount: 4
-//Ширина каждой кнопки вычисляется как 17.5% от ширины родительского элемента (области для кнопок)
-            property real buttonWidth: width * .175
+//Ширина каждой кнопки вычисляется как 19.23% (~60) от ширины родительского элемента (области для кнопок)
+            property real buttonWidth: width * .1923
 //Высота кнопки равна ширине, что делает кнопки квадратными
             property real buttonHeight: buttonWidth
 
 //пространство, которое остаётся между рядами кнопок
             property real rowSpacingAllocation: height-(buttonHeight*rowCount)
-//пространство, оставшееся между столбцами кнопок (вертикально)
+//пространство, оставшееся между столбцами кнопок (гор)
             property real colSpacingAllocation: width-(buttonWidth*colCount)
 
 //вычисляется точное расстояние (отступ) между строками кнопок

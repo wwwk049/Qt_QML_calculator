@@ -7,5 +7,7 @@
         <file>MyCalcButtons.qml</file>
         <file>MyCalcButton.qml</file>
         <file>SecretMenu.qml</file>
+        <file>Open Sans/OpenSans.ttf</file>
+        <file>Open Sans/OpenSans-Italic.ttf</file>
     </qresource>
 </RCC>

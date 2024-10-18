@@ -22,14 +22,15 @@ Item {
 
             Label {
                 anchors.fill: parent
-                anchors.rightMargin: 30
-                anchors.bottomMargin: 10
+                anchors.rightMargin: width * .0833 //~30 30/360
+                anchors.bottomMargin: height * .2
 
                 minimumPixelSize: 1  //минимальный размер шрифта в пикселях
-                font.pixelSize: 50
-                lineHeight: 1.2  // межстрочный интервал: 30 пикселей / 24 пикселя = 1.25
+                //640*.093375 = 60
+                font.pixelSize: height * .83333
+                lineHeight: 1.2  // межстрочный интервал: 60 пикселей / 50 пикселя = 1.2
                 font.letterSpacing: .5 // межбуквенный интервал в пикселях
-                font.family: "Open Sans"  // шрифт
+                font.family: openSans.name  // шрифт
                 font.weight: Font.DemiBold
                 fontSizeMode: Text.Fit //вписываю в метку (достаточно изменить pixelSize, чтобы понять в чем дело)
 
